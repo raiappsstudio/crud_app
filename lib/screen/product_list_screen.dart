@@ -67,6 +67,9 @@ class _ProductListScreenState extends State<ProductListScreen> {
     );
   }
 
+
+
+
 //json request method==================================
   Future<void> _getProductList() async {
     _getProductlistInProgress = true;
@@ -81,7 +84,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
       final decodeData = jsonDecode(response.body);
       for (Map<String, dynamic> p in decodeData['data']) {
         Product product = Product(
-          id: p['id'],
+          id: p['_id'],
           ProductName: p['ProductName'],
           ProductCode: p['ProductCode'],
           Img: p['Img'],

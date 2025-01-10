@@ -59,9 +59,9 @@ class _ProductItemState extends State<ProductItem> {
   Future<void> _deleteProduct() async {
     Uri uri = Uri.parse('https://crud.teamrabbil.com/api/v1/DeleteProduct/${widget.product.id}');
     Object? requestBody;
-    Response response = await post(uri,
+    Response response = await get(uri,
         headers: {"Content-type": "application/json"},
-        body: jsonEncode(requestBody));
+      );
 
     print(response.statusCode);
     print(response.body);
