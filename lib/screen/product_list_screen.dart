@@ -77,8 +77,8 @@ class _ProductListScreenState extends State<ProductListScreen> {
     productlist.clear();
     Uri uri = Uri.parse("https://crud.teamrabbil.com/api/v1/ReadProduct");
     Response response = await get(uri);
-    print(response.statusCode);
-    print(response.body);
+/*    print(response.statusCode);
+    print(response.body);*/
 
     if (response.statusCode == 200) {
       final decodeData = jsonDecode(response.body);

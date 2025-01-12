@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:crud_app/models/product.dart';
-import 'package:crud_app/screen/delete_product_sreen.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import '../screen/update_product_sreen.dart';
@@ -58,7 +57,7 @@ class _ProductItemState extends State<ProductItem> {
 
   Future<void> _deleteProduct() async {
     Uri uri = Uri.parse('https://crud.teamrabbil.com/api/v1/DeleteProduct/${widget.product.id}');
-    Object? requestBody;
+
     Response response = await get(uri,
         headers: {"Content-type": "application/json"},
       );
